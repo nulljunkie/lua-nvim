@@ -64,37 +64,10 @@ return {
                     which_key = true,
                 },
             })
-            vim.cmd.colorscheme("catppuccin-mocha")
+            -- vim.cmd.colorscheme("catppuccin-mocha")
         end,
     },
 
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,
-        priority = 1000, --> Higher priority over other plugins
-        config = function()
-            local is_transparent = false
-            require("tokyonight").setup({
-                transparent = is_transparent,
-                styles = {
-                    sidebars = is_transparent and "transparent" or "dark",
-                    floats = is_transparent and "transparent" or "dark",
-                },
-            })
-            -- XXX: 
-            -- vim.cmd.colorscheme("tokyonight-night")
-        end,
-    },
-    {
-        "scottmckendry/cyberdream.nvim",
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require("cyberdream").setup()
-            -- XXX:
-            -- vim.cmd.colorscheme("cyberdream")
-        end,
-    },
     {
         "projekt0n/github-nvim-theme",
         lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -105,6 +78,8 @@ return {
             })
             -- XXX:
             -- vim.cmd.colorscheme("github_dark_high_contrast")
+            -- vim.cmd.colorscheme("github_dark_dimmed")
+            vim.cmd.colorscheme("github_dark_colorblind")
         end,
     },
 }
