@@ -1,11 +1,12 @@
-return { 
-    "akinsho/bufferline.nvim",
-    version = "*",
-    dependencies = "nvim-tree/nvim-web-devicons",
+return {
+	"akinsho/bufferline.nvim",
+	version = "*",
+	dependencies = "nvim-tree/nvim-web-devicons",
 
-    config = function ()
-        require("bufferline").setup()
+	config = function()
+		require("bufferline").setup()
 
-        vim.api.nvim_set_keymap("n", "<tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "cycling between buffers" })
-    end
+		vim.api.nvim_set_keymap("n", "<tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "cycling between buffers" })
+		vim.api.nvim_set_keymap("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "cycling between buffers" })
+	end,
 }
