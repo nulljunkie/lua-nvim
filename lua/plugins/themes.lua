@@ -64,7 +64,7 @@ return {
 					which_key = true,
 				},
 			})
-			vim.cmd.colorscheme("catppuccin-mocha")
+			-- vim.cmd.colorscheme("catppuccin-mocha")
 		end,
 	},
 
@@ -80,7 +80,17 @@ return {
 			--
 			-- vim.cmd.colorscheme("github_dark_high_contrast")
 			-- vim.cmd.colorscheme("github_dark_dimmed")
-			-- vim.cmd.colorscheme("github_dark_colorblind")
+			vim.cmd.colorscheme("github_dark_colorblind")
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+		config = function()
+			-- require("github-theme").setup({})
+			-- vim.cmd.colorscheme("tokyonight-night")
 		end,
 	},
 }
